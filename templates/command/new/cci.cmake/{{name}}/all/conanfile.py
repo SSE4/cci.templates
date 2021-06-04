@@ -15,7 +15,7 @@ class {{package_name}}Conan(ConanFile):
     default_options = {"shared": False,
                        "fPIC": True}
     exports_sources = ["CMakeLists.txt"]
-    generators = "cmake",
+    generators = "cmake", "cmake_find_package", "cmake_find_package_multi"
     _cmake = None
 
     @property
