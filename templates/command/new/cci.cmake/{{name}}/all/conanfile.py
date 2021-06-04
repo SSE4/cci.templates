@@ -43,11 +43,10 @@ class {{package_name}}Conan(ConanFile):
     def _configure_cmake(self):
         if self._cmake:
             return self._cmake
-        cmake = CMake(self)
+        self._cmake = CMake(self)
         # add definitions, if needed
-        # cmake.definitions['{{ name }}_SOMETHING'] = True
-        cmake.configure(build_folder=self._build_subfolder)
-        self._cmake = cmake
+        # self._cmake.definitions['{{ name }}_SOMETHING'] = True
+        self._cmake.configure(build_folder=self._build_subfolder)
         return self._cmake
 
     def build(self):
