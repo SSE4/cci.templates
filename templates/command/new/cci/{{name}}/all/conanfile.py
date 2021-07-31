@@ -2,6 +2,8 @@ import os
 from conans import ConanFile, tools
 
 
+required_conan_version = ">=1.37.0"
+
 class {{package_name}}Conan(ConanFile):
     name = "{{ name }}"
     license = ""
